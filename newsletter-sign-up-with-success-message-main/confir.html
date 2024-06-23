@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="card-Confirm" id="confirm">
+        <div class="copo-card">
+          <img src="assets/images/icon-success.svg" alt="">
+          <div class="txt-confirm">
+            <h1>Thanks for subscribing!</h1>
+            <p>
+              A confirmation email has been sent to  <span ><p id="emailconfirmado"></p></span>
+              Please open it and click the button inside to confirm your subscription.
+            </p>
+          </div>
+          <button id="butao-confirm" >Dismiss message</button>
+        </div>
+      </div>
+      
+      <script>
+         const params= new URLSearchParams(window.location.search);
+         const email=params.get('email');
+
+         const emailEl = document.getElementById('emailconfirmado');
+         emailEl.textContent = `${email}`;
+      </script>
+    
+</body>
+</html>
